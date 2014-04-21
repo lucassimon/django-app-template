@@ -5,7 +5,6 @@ from django.contrib import admin
 from django.utils.translation import ugettext as _
 
 # Third-party app imports
-from yawdadmin import admin_site
 
 # Realative imports of the 'app-name' package
 from .models import Example, ExampleContact
@@ -24,7 +23,6 @@ class ExampleAdmin(admin.ModelAdmin):
     Classe admin utilizada no django admin para oferecer as
     opcoes de CRUD da tabela Genero
     """
-    order = 3
 
     inlines = [ExampleInline, ]
 
@@ -68,4 +66,4 @@ class ExampleAdmin(admin.ModelAdmin):
     )
 
 
-admin_site.register(Example, ExampleAdmin)
+admin.site.register(Example, ExampleAdmin)

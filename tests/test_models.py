@@ -1,16 +1,16 @@
 # -*- coding:utf-8 -*-
 
-#Core Django imports
+# Core Django imports
 from django.test import TestCase
 from django.utils import timezone
 
-#Third-party app imports
+# Third-party app imports
 from model_mommy import mommy
 
 # Relative imports of the 'app-name' package
 
 
-######### WHAT WE NEED TEST #########
+# ######## WHAT WE NEED TEST #########
 #
 # 1 - creating / criação
 # 2 - reading / leitura
@@ -20,11 +20,11 @@ from model_mommy import mommy
 # 6 - model managers / não ha tradução para isto
 # 7 - model managers methods / não ha tradução para isto
 
-############# TIPS ##################
+# ############ TIPS ##################
 #
 # 1 - Cada função de test deve haver apenas 1 assert
 #
-#####################################
+# ####################################
 
 class ModelNameTests(TestCase):
     """
@@ -39,5 +39,3 @@ class ModelNameTests(TestCase):
         # o que eu quero criar
         what = mommy.make(Model)
         self.assertEqual(what.__unicode__(), what.title)
-
-
