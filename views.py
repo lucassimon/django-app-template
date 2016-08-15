@@ -13,14 +13,3 @@ from django.utils.translation import ugettext as _
 # Third-party app imports
 
 # Imports from your apps
-
-
-def hello(request):
-    """
-    Doc string
-    """
-
-    return render_to_response(
-        'hello.html',
-        context_instance=RequestContext(request)
-    )
